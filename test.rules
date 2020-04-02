@@ -1,0 +1,2 @@
+alert tcp any any -> any 3399 (pcre:"/(login|Initial)/";flowbits:noalert;flowbits:set,markflow;sid:1000001)
+alert tcp any any -> any 3399 (msg:"bot founded";pcre:"//";flowbits:isset,markflow;sid:1000001)
